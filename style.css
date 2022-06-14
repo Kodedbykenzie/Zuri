@@ -1,0 +1,193 @@
+:root {
+    /*primary colors for backgrounds */
+    --clr-primary-1: hsl(31, 77%, 52%);
+    --clr-primary-2: hsl(184, 100%, 22%);
+    --clr-primary-3: hsl(179, 100%, 13%);
+    /* neutral colors background, headings, buttons*/
+    --clr-neutral-1: hsl(0, 0%, 95%);
+    /* neutral colors for paragraphs */
+    --clr-neutral-2: hsl(0, 0%, 95%);
+    /* font */
+    --ff-title: 'Big Shoulders Display', cursive;
+    --ff-text: 'Lexend Deca', sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.02rem;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+}
+
+body {
+    background: var(--clr-neutral-1);
+    font-size: 0.938rem;
+    line-height: 1.7;
+    word-spacing: 0.2rem;
+    font-family: var(--ff-text);
+}
+
+a {
+    display: inline-block;
+    text-transform: capitalize;
+    max-width: 18.75rem;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    padding: .5rem 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 1.3rem;
+    background: var(--clr-neutral-1);
+    /* transition for hover */
+    /* transition: var(--transition); */
+}
+
+a:active {
+    background: transparent;
+    color: var(--clr-neutral-1);
+    border: 1px solid var(--clr-neutral-1);
+}
+
+a:focus {
+    background: transparent;
+    color: var(--clr-neutral-1);
+    border: 1px solid var(--clr-neutral-1);
+}
+
+
+/* hover if you want */
+
+
+/* a:hover{
+    background: transparent;
+    color: var(--clr-neutral-1);
+    border: 1px solid var(--clr-neutral-1);
+} */
+
+img {
+    display: block;
+    max-width: 18.75rem;
+}
+
+h1 {
+    font-family: var(--ff-title);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    color: var(--clr-neutral-1);
+    margin-bottom: 1.5rem;
+    max-width: 18.75rem;
+}
+
+p {
+    color: var(--clr-neutral-2);
+    margin-bottom: 4rem;
+    max-width: 18.75rem;
+    opacity: 0.7;
+}
+
+
+/*
+=============== 
+Boxes
+===============
+*/
+
+.section {
+    min-height: 100vh;
+    background: var(--clr-neutral-1);
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.section-center {
+    width: 90vw;
+    max-width: 73.125rem;
+    padding: 2rem 0;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.box {
+    max-width: 23.438rem;
+    height: 470px;
+    padding: 4rem 2rem 2rem;
+    box-shadow: var(--shadow);
+}
+
+.box-img-container {
+    margin-bottom: 1.3rem;
+}
+
+.box-1 {
+    background: var(--clr-primary-1);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.box-2 {
+    background: var(--clr-primary-2);
+}
+
+.box-3 {
+    background: var(--clr-primary-3);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.box1-btn {
+    color: var(--clr-primary-1);
+}
+
+.box2-btn {
+    color: var(--clr-primary-2);
+}
+
+.box3-btn {
+    color: var(--clr-primary-3);
+}
+
+@media screen and (min-width: 62rem) {
+    .section-center {
+        width: 95vw;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+    .box {
+        max-width: 18.75rem;
+    }
+    .box-1 {
+        border-bottom-left-radius: 0.5rem;
+        border-top-right-radius: 0;
+    }
+    .box-3 {
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0;
+    }
+}
